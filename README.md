@@ -1,6 +1,6 @@
 # remove-data-cy.macro
 
-> Babel macro for removing data-cy attributes from JSX Elements
+> Babel macro for removing data-cy attributes from JSX Elements\
 > Usable with CRA versions >= 2.0
 
 This package is highly experimental, intended for use in my own projects.
@@ -25,7 +25,7 @@ yarn add remove-data-cy.macro --dev
 
 ```sh
 import rcy from "remove-data-cy.macro";
-<div {...rcy`data-cy='welcome-message'`>Hello!</div>
+<div {...rcy`data-cy='welcome-message'`}>Hello!</div>
 ```
 
 Results in
@@ -38,13 +38,14 @@ Every other environment:
 <div data-cy='welcome-message'>Hello!</div>
 ```
 
-Production environemtn is determined by 
+Production environemtn is determined by
+
 ```sh
 process.env.NODE_ENV == "production" ||
 process.env.REACT_APP_CUSTOM_ENV == "prod" ||
 process.env.REACT_APP_CUSTOM_ENV == "production"
-````
+```
 
-The values exist in a .env file at the root of your project(where your package.json is).
+These values should be in a .env file at the root of your project(where your package.json is).
 
-CRA automatically sets NODE_ENV to *'production'*, *'development'* or *'test'* for respectively **yarn build**, **yarn start** and **yarn test**
+CRA automatically sets NODE_ENV to _'production'_, _'development'_ or _'test'_ for respectively **yarn build**, **yarn start** and **yarn test**
