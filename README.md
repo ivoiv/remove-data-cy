@@ -24,8 +24,8 @@ yarn add remove-data-cy.macro --dev
 ## Usage
 
 ```sh
-import rcy from "remove-data-cy.macro";
-<div {...rcy`data-cy='welcome-message'`}>Hello!</div>
+import rdc from "remove-data-cy.macro";
+<div {...rdc`data-cy='welcome-message'`}>Hello!</div>
 ```
 
 Results in
