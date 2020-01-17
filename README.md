@@ -1,6 +1,5 @@
 # remove-data-cy.macro
 
-> \
 > Babel macro for removing data-cy attributes(used with Cypress) from JSX Elements in production environemnts.
 > Usable with CRA versions >= 2.0
 
