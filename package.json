@@ -1,0 +1,34 @@
+{
+  "name": "remove-data-cy.macro",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./macro.js",
+  "typings": "./macro.d.ts",
+  "description": "Remove data-cy tags from JSX Elements",
+  "scripts": {
+    "prepare": "tsc --declaration --outDir build macro.tsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivoiv/remove-data-cy.git"
+  },
+  "keywords": [
+    "babel",
+    "macro",
+    "data-cy",
+    "cypress"
+  ],
+  "author": "Ivo Ivanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivoiv/remove-data-cy/issues"
+  },
+  "homepage": "https://github.com/ivoiv/remove-data-cy#readme",
+  "devDependencies": {
+    "@types/node": "^13.1.7"
+  },
+  "dependencies": {
+    "babel-plugin-macros": "^2.8.0"
+  }
+}
