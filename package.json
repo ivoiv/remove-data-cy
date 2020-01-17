@@ -2,12 +2,12 @@
   "name": "remove-data-cy.macro",
   "version": "0.1.0",
   "private": true,
-  "main": "./macro.js",
-  "typings": "./macro.d.ts",
+  "main": "./lib/macro.js",
+  "typings": "./lib/macro.d.ts",
   "description": "Remove data-cy tags from JSX Elements",
   "scripts": {
-    "prepare": "tsc --declaration --outDir build macro.tsx",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf lib && mkdir lib && babel ./src --out-dir lib --extensions '.ts,.tsx' && tsc --outDir lib"
   },
   "repository": {
     "type": "git",
@@ -19,16 +19,25 @@
     "data-cy",
     "cypress"
   ],
+  "files": [
+    "lib"
+  ],
   "author": "Ivo Ivanov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ivoiv/remove-data-cy/issues"
   },
   "homepage": "https://github.com/ivoiv/remove-data-cy#readme",
-  "devDependencies": {
-    "@types/node": "^13.1.7"
-  },
   "dependencies": {
     "babel-plugin-macros": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.7",
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3"
   }
 }
